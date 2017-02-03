@@ -1,0 +1,8 @@
+.container .jumbotron{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.submitButton p{
+  color:red;
+}

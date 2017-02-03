@@ -1,0 +1,22 @@
+nav{
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px 0 gray;
+}
+
+.navbar-toggle{
+  float:left;
+  margin-left: 15px;
+}
+
+.container{
+  width:100%;
+  padding: 0;
+}
+.contentContainer{
+  top:50px;
+  position: relative !important;
+  box-sizing: border-box;
+  padding-top: 48px;
+  margin: 0 10%;
+  margin-bottom: 50px;
+}

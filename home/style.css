@@ -1,0 +1,54 @@
+nav{
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px 0 gray;
+}
+
+.navbar-toggle{
+  float:left;
+  margin-left: 15px;
+}
+
+.container{
+  width:100%;
+  padding: 0;
+}
+.contentContainer{
+  top:50px;
+  position: relative !important;
+  box-sizing: border-box;
+  padding-top: 48px;
+  margin: 0 10%;
+  margin-bottom: 50px;
+}
+
+
+
+.contentContainer span{
+    font-weight: 700 !important;
+    color: red;
+}
+
+.contentContainer h1{
+  font-weight: 200 !important;
+  font-size: 48px;
+  width: 70%;
+  line-height: 56px;
+  letter-spacing: -0.8px;
+  padding: 0;
+}
+
+div{
+    display: inline-block;
+}
+
+.searchBox{
+  border: 1px solid gray;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 gray;
+  position: relative !important;
+}
+
+.login .jumbotron{
+  padding-top: 0;
+  padding-bottom: 0;
+}

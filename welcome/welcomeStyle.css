@@ -1,0 +1,37 @@
+nav{
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px 0 gray;
+}
+
+.navbar-toggle{
+  float:left;
+  margin-left: 15px;
+}
+
+.row{
+  width:100%;
+}
+
+.container{
+  width:100%;
+}
+.contentContainer{
+  top:50px;
+  position: relative !important;
+  box-sizing: border-box;
+  padding-top: 48px;
+  margin: 0 10%;
+  margin-bottom: 50px;
+}
+
+.well{
+  width:100%;
+}
+div{
+    display: inline-block;
+    position: relative;
+}
+
+.fullWidth{
+  width:100%;
+}
