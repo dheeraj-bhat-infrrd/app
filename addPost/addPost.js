@@ -25,6 +25,14 @@ angular.module('webApp.addPost',['ui.router'])
       post: post
     }).then(function(ref){
       console.log(ref);
+      $scope.success=true;
+      window.setTimeout(function(){
+        $scope.$apply(function(){
+          $scope.success = false;
+          $scope.article.titleTxt="";
+          $scope.article.postTxt="";
+        });
+      },2000);
     },function(error){
       console.log(error);
     });

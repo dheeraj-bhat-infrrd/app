@@ -25,7 +25,15 @@
         </div>
       </nav>
 
-      <div class="container contentContainer">
+      <div class="container alertSuccess" ng-show="success">
+          <div class="row">
+            <div class="alert alert-success">
+              <strong>Success!</strong> The post has been added
+            </div>
+          </div>
+      </div>
+
+      <div class="container contentContainer" >
         <form role="form" name="postForm" ng-submit="createPost()" novalidate="">
           <legend>Create Post</legend>
           <div class="row">

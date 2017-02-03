@@ -33,5 +33,9 @@ angular.module('webApp.welcome',['ui.router','firebase'])
   $scope.deletePost = function(deleteArticle){
     $scope.articles.$remove(deleteArticle);
     $("#deleteModal").modal('hide');
+  };
+
+  $scope.logout = function(){
+    commonProp.logoutUser();
   }
 }])

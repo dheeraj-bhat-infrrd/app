@@ -13,10 +13,16 @@ nav{
   padding: 0;
 }
 .contentContainer{
-  top:50px;
+  top:20px;
   position: relative !important;
   box-sizing: border-box;
   padding-top: 48px;
   margin: 0 10%;
   margin-bottom: 50px;
+}
+
+.alertSuccess{
+  bottom: -10px;
+  margin-top:100px;
+  width:80%;
 }

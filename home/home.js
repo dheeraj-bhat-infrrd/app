@@ -52,8 +52,10 @@ angular.module('webApp.home',['ui.router','firebase'])
   }
 }])
 
-.service('commonProp',['$state',function($state){
+.service('commonProp',['$state','$firebaseAuth',function($state,$firebaseAuth){
   var user="";
+  var auth = $firebaseAuth();
+
   return{
     getUser: function(){
       if(user == ""){
@@ -64,6 +66,14 @@ angular.module('webApp.home',['ui.router','firebase'])
     setUser: function(value){
       localStorage.setItem("userEmail",value)
       user=value;
+    },
+    logoutUser: function(){
+      auth.$signOut().then(function(){
+        console.log("Logged Out Successfully");
+        user ="";
+        localStorage.removeItem('userEmail');
+        $state.go('home');
+      })
     }
   };
 }])
