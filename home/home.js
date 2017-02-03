@@ -28,7 +28,7 @@ angular.module('webApp.home',['ui.router','firebase'])
     controller: 'welcomeCtrl'
   });
 
-  
+
 }])
 
 .controller('homeCtrl',['$scope','$firebaseAuth','$state','commonProp',function($scope,$firebaseAuth,$state,commonProp){
@@ -56,9 +56,13 @@ angular.module('webApp.home',['ui.router','firebase'])
   var user="";
   return{
     getUser: function(){
+      if(user == ""){
+        user = localStorage.getItem("userEmail");
+      }
       return user;
     },
     setUser: function(value){
+      localStorage.setItem("userEmail",value)
       user=value;
     }
   };

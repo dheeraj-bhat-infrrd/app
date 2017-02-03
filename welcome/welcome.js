@@ -25,4 +25,13 @@ angular.module('webApp.welcome',['ui.router','firebase'])
       console.log(error);
     });
   };
+
+  $scope.deleteCnf = function(article){
+    $scope.deleteArticle = article;
+  };
+
+  $scope.deletePost = function(deleteArticle){
+    $scope.articles.$remove(deleteArticle);
+    $("#deleteModal").modal('hide');
+  }
 }])
