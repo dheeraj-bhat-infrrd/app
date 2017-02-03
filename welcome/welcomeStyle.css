@@ -35,3 +35,7 @@ div{
 .fullWidth{
   width:100%;
 }
+
+.rightMargin{
+  margin-right:5px;
+}

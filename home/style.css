@@ -52,3 +52,7 @@ div{
   padding-top: 0;
   padding-bottom: 0;
 }
+
+.rightMargin{
+  margin-right:5px;
+}
