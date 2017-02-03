@@ -35,6 +35,10 @@ angular.module('webApp.home',['ui.router','firebase'])
 
     $scope.username = commonProp.getUser();
 
+    if($scope.username != ""){
+      $state.go('welcome');
+    }
+
     $scope.signIn = function(){
     var username = $scope.user.email;
     var password = $scope.user.password;

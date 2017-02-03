@@ -11,7 +11,14 @@ angular.module('webApp.addPost',['ui.router'])
   });
 }])
 
-.controller('addPostCtrl',['$scope','$firebaseArray',function($scope,$firebaseArray){
+.controller('addPostCtrl',['$scope','$firebaseArray','$state','commonProp',function($scope,$firebaseArray,$state,commonProp){
+
+
+  $scope.username = commonProp.getUser();
+
+  if(!$scope.username){
+    $state.go('home');
+  }
 
   var ref = firebase.database().ref().child('Articles');
   $scope.articles = $firebaseArray(ref);

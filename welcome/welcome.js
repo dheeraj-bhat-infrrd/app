@@ -2,8 +2,12 @@
 
 angular.module('webApp.welcome',['ui.router','firebase'])
 
-.controller('welcomeCtrl',['$scope','commonProp','$firebaseArray','$firebaseObject',function($scope,commonProp,$firebaseArray,$firebaseObject){
+.controller('welcomeCtrl',['$scope','commonProp','$firebaseArray','$firebaseObject','$state',function($scope,commonProp,$firebaseArray,$firebaseObject,$state){
   $scope.username = commonProp.getUser();
+
+  if(!$scope.username){
+    $state.go('home');
+  }
 
   var ref = firebase.database().ref().child('Articles');
   $scope.articles = $firebaseArray(ref);
